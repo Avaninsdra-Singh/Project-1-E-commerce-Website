@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    transition: all 0.5s ease;
+    /* transition: all 0.5s ease; */
     font-family: "Google Sans", sans-serif;
 }
 
@@ -12,7 +12,7 @@ header {
     background-color: #ffffff;
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 10000;
 }
 
 nav {
@@ -129,8 +129,14 @@ nav * {
     width: 100%;
     position: relative;
     z-index: 0;
+    /* border: 2px solid red; */
     color: white;
 
+}
+
+#sec1ContSub div {
+    /* border: 2px solid red; */
+    position: relative;
 }
 
 #sec1ContSub :nth-child(4) input::placeholder {
@@ -139,8 +145,9 @@ nav * {
 }
 
 #sec1ContSub :nth-child(4) :nth-child(2) {
-    position: relative;
+    position: absolute;
     z-index: 1000;
+    right: 3px;
     border-radius: 20px;
     /* width: 15%; */
 }
@@ -300,6 +307,7 @@ nav * {
     padding: 20px;
 }
 
+
 .sec2SubJoin span {
     display: flex;
     flex-flow: row wrap;
@@ -309,6 +317,12 @@ nav * {
     width: 40%;
     height: 90px;
     position: relative;
+}
+
+@media only screen and (max-width: 1024px) {
+    .sec2SubJoin span {
+        width: 50%;
+    }
 }
 
 .sec2SubJoin button {
@@ -321,6 +335,20 @@ nav * {
     padding: 20px;
     font-size: 16px;
     font-weight: bold;
+}
+
+@media only screen and (max-width: 768px) {
+    .sec2SubJoin button {
+        position: static;
+        width: 100%;
+        margin: 8px 0;
+    }
+
+    .sec2SubJoin span {
+        height: inherit;
+        /* border: 2px solid red; */
+        width: 60%;
+    }
 }
 
 .sec2SubJoin :nth-child(3) {
@@ -416,6 +444,61 @@ nav * {
     filter: invert(100%);
 }
 
+@media only screen and (max-width: 768px) {
+    #faq {
+        font-size: 38px;
+        line-height: 80px;
+    }
+
+    #faq ul {
+        font-size: 23px;
+    }
+
+    #section1 {
+        flex-flow: column wrap;
+        /* border: 2px solid red; */
+        align-content: center;
+    }
+
+    .sec1Sub {
+        /* border: 2px solid red; */
+        width: 90%;
+    }
+
+    #sec1ContSub {
+        align-self: center;
+    }
+
+    #sec2Cont {
+        width: 90%;
+    }
+
+    #sec2Cont :nth-child(1) {
+        font-size: 26px;
+    }
+
+    #sec2Cont :nth-child(2) {
+        font-size: 16px;
+
+    }
+
+    #sec2Cont :nth-child(3) {
+        font-size: 16px;
+    }
+
+    .sec2SubJoin>:nth-child(1) {
+        font-size: 36px;
+    }
+
+    #sec2Header {
+        margin: 0;
+        font-size: 34px;
+        padding: 50px;
+        box-sizing: border-box;
+    }
+
+}
+
 footer {
     width: 100%;
     background-color: black;
@@ -461,4 +544,50 @@ footer .logo a svg {
 
 #footerLinks ul>:nth-child(1):hover {
     color: rgb(255, 255, 255);
+}
+
+@media only screen and (max-width: 768px) {
+    .sec2SubJoin>:nth-child(2) {
+        width: 90%;
+    }
+
+    .sec2SubJoin {
+        padding: 0;
+        text-align: center;
+    }
+
+    #sec3 {
+        margin: 50px auto;
+        font-size: 36px;
+    }
+
+    #sec3Grid1 {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    #faq *{
+        /* line-height: 40px; */
+        margin: 10px 0;
+    }
+    #faq ul {
+        margin: 50px 0; 
+        font-size: 22px;
+    }
+    #faq ul li img {
+        width: 30px;
+    }
+     #faq {
+        font-size: 36px;
+        line-height: 40px;
+     }
+     footer {
+         flex-flow: column;
+         height: 160px;
+         align-items: center;
+        }
+    footer ul {
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+    }
 }
