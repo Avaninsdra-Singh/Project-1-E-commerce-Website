@@ -427,9 +427,6 @@ nav * {
     font-size: 28px;
 }
 
-.sep {
-    border: 1px solid gray;
-}
 
 #faq ul li {
     display: flex;
@@ -563,26 +560,31 @@ footer .logo a svg {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 
-    #faq *{
+    #faq * {
         /* line-height: 40px; */
         margin: 10px 0;
     }
+
     #faq ul {
-        margin: 50px 0; 
+        margin: 50px 0;
         font-size: 22px;
     }
+
     #faq ul li img {
         width: 30px;
     }
-     #faq {
+
+    #faq {
         font-size: 36px;
         line-height: 40px;
-     }
-     footer {
-         flex-flow: column;
-         height: 160px;
-         align-items: center;
-        }
+    }
+
+    footer {
+        flex-flow: column;
+        height: 160px;
+        align-items: center;
+    }
+
     footer ul {
         flex-flow: column;
         align-items: center;
